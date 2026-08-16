@@ -14,6 +14,7 @@ FROM alpine:latest
 WORKDIR /app
 
 COPY --from=builder /app/server ./server
+COPY --from=builder /app/tracker.db ./tracker.db
 
 EXPOSE 3000
 
